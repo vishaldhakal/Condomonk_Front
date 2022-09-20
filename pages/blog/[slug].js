@@ -9,6 +9,19 @@ import { useRouter } from "next/router";
 
 export default function Pageee({ data }) {
   const myroute = useRouter();
+
+  function convdate(dattte) {
+    const da = new Date(dattte);
+    const options = { month: "long" };
+    return (
+      new Intl.DateTimeFormat("en-US", options).format(da) +
+      " " +
+      da.getDay() +
+      "  " +
+      da.getFullYear()
+    );
+  }
+
   return (
     <>
       <Head>
@@ -20,7 +33,7 @@ export default function Pageee({ data }) {
           rel="canonical"
           href={"https://homebaba.ca/blog/" + myroute.query.slug + "/"}
         />
-
+        <meta name="robots" content="index, follow"></meta>
         <meta property="og:type" content="og:website" />
         <meta property="og:title" content={data.meta_title} />
         <meta property="og:description" content={data.meta_description} />
@@ -40,21 +53,22 @@ export default function Pageee({ data }) {
         <div className="text-center" id="thumb">
           <div className="container-fluid px-3">
             <div className="row row-cols-1 row-cols-sm-3 g-5 mx-0">
+              <div className="col-sm-2"></div>
               <div
                 className="col-12 col-sm-7 rounded nnn container bg-white"
                 id="mymtn"
               >
                 <div className="mt-5">
-                  <Image
+                  {/* <Image
                     src={"https://api.condomonk.ca" + data.thumbnail_image}
                     className="img-fluid card-img-top"
                     alt={data.thumbnail_image_alt_description}
-                    height={400}
+                    height={450}
                     width={1000}
                     layout="responsive"
                     objectFit="cover"
-                    objectPosition="center"
-                  />
+                    objectPosition="top"
+                  /> */}
                   <div className="my-1"></div>
                   <div>
                     <div className="d-flex flex-column flex-sm-row justify-content-between align-items-center py-1 py-sm-3">
@@ -77,11 +91,6 @@ export default function Pageee({ data }) {
                         </a>
                       </Link>
                       <Breadcrumbs />
-                      <Link href="/buy-house">
-                        <a className="btn btn-sm btn-light">
-                          Search for a House
-                        </a>
-                      </Link>
                     </div>
                   </div>
                   <h1 className="text-start main-title py-3 mb-3 fs-1">
@@ -105,25 +114,25 @@ export default function Pageee({ data }) {
                             " " +
                             data.author.user.last_name}
                         </div>
-                        <div className="text-secondary text-start">
-                          {data.author.user_post}
-                        </div>
+                        <div className="mt-1">{convdate(data.created_at)}</div>
                       </div>
                     </div>
                     <div className="text-secondary text-start">
-                      Oct. 3, 2020
-                      <br />
-                      15 min read
+                      {data.category.name}
+                      <br />5 min read
                     </div>
                   </div>
                   <hr />
-                  <div className="text-start mt-5 text-inside">
+                  <div
+                    className="text-start mt-5 text-inside"
+                    id="make-img-responsive"
+                  >
                     <div dangerouslySetInnerHTML={{ __html: data.content }} />
                   </div>
                 </div>
               </div>
-              <div className="col-sm-4">
-                <div className="sidebar mt-3">
+              <div className="col-sm-2">
+                {/* <div className="sidebar mt-3">
                   <div className="myps3">
                     <div className="position-relative">
                       <h2 className="ps">
@@ -156,7 +165,7 @@ export default function Pageee({ data }) {
                       Yes ! Send Me a Copy Fast
                     </button>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

@@ -35,7 +35,7 @@ export default function Page({ data, catdata }) {
       </Head>
       <Navbar borderrr="shadow-mine aa" />
       <div className="bg-white">
-        <div className="py-5 mb-4 bg-light backk rounded-3 position-relative">
+        {/* <div className="py-5 mb-4 bg-light backk rounded-3 position-relative">
           <Image
             src="/blogback.jpg"
             alt="..."
@@ -50,7 +50,7 @@ export default function Page({ data, catdata }) {
             </h1>
             <Breadcrumb textcol="text-white" />
           </div>
-        </div>
+        </div> */}
         <div className="container mt-2">
           <main>
             <div className="py-4">
