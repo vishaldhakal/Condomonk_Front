@@ -15,28 +15,20 @@ export default function Navbar(props) {
             <Link href="/" activeSubClassName=" " activeClassName=" ">
               <a className="navbar-brand me-0 me-sm-4">
                 <div className="d-none d-sm-inline fs-3 fw-bold">
-                  <span>homebaba</span>
                   <span>
                     <img
-                      src="/canadaleaf.svg"
-                      alt="canada mapel leaf"
-                      className="img-fluid leaf-img ms-1"
+                      src="/condomonk.png"
+                      alt="Homebaba Logo for mobile version"
+                      className="img-fluid small-logo-img"
                     />
                   </span>
                 </div>
                 <span className="d-inline d-sm-none">
                   <img
-                    src="/logo.png"
+                    src="/condomonk.png"
                     alt="Homebaba Logo for mobile version"
                     className="img-fluid small-logo-img"
                   />
-                  <span>
-                    <img
-                      src="/canadaleaf.svg"
-                      alt="canada mapel leaf"
-                      className="img-fluid leaf-img ms-1"
-                    />
-                  </span>
                 </span>
               </a>
             </Link>
