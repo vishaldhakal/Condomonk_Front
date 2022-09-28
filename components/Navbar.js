@@ -19,7 +19,7 @@ export default function Navbar(props) {
                     <img
                       src="/condomonk.png"
                       alt="Homebaba Logo for mobile version"
-                      className="img-fluid small-logo-img"
+                      className="img-fluid smalll-logo-img"
                     />
                   </span>
                 </div>

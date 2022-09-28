@@ -2006,6 +2006,9 @@ div[data-widget="LocalContent"]
 .small-logo-img {
   width: 40px;
 }
+.smalll-logo-img {
+  width: 200px;
+}
 .form-select,
 .form-control {
   padding-top: 1rem;
