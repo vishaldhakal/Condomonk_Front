@@ -8,14 +8,11 @@ export default function Footer() {
           <div className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5">
             <div className="col-md-4 my-3">
               <a className="navbar-brand bottomlogo" href="/">
-                homebaba
-                <span>
-                  <img
-                    src="/canadaleaf.svg"
-                    alt="canada mapel leaf"
-                    className="img-fluid leaf-img2 ms-1"
-                  />
-                </span>
+                <img
+                  src="/condomonk.png"
+                  alt="Homebaba Logo for mobile version"
+                  className="img-fluid smalll-logo-img"
+                />
               </a>
               <p className="bottex mt-3 justifyy">
                 Homebaba is the online Database for new Pre construction
